@@ -1,0 +1,16 @@
+# file: src/handlers/locations/locations.serverless.yml
+
+list:
+  handler: src/handlers/locations/list.handler
+  events:
+    - http: get /locations
+
+get:
+  handler: src/handlers/locations/get.handler
+  events:
+    - http: get /locations/{id}
+
+add:
+  handler: src/handlers/locations/add.handler
+  events:
+    - 'file.uploaded'

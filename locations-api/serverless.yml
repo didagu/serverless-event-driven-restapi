@@ -1,0 +1,12 @@
+service: locations-api
+provider:
+  name: aws
+  runtime: nodejs10.x
+  stage: dev
+  region: us-east-1
+
+functions:
+  - '${file(src/handlers/locations/locations.serverless.yml)}'
+
+plugins:
+  - serverless-offline

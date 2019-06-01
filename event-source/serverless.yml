@@ -1,0 +1,19 @@
+service: event-source
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+
+functions:
+  upload:
+    handler: handler.fileUpload
+    events:
+      - http: POST /upload
+          
+    
+plugins:
+  - serverless-offline
+
+custom:
+  serverless-offline:
+    port: 4000

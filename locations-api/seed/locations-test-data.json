@@ -1,0 +1,32 @@
+[
+    {
+        "id": "1",
+        "latitude" : 34.34543,
+        "longitude" : 21.34454,
+        "location_name" : "a random location name"
+    },
+    {
+        "id": "2",
+        "latitude": 1.32343,
+        "longitude": 2.34454,
+        "location_name": "another random location name"
+    },
+    {
+        "id": "3",
+        "latitude": 3.34543,
+        "longitude": 4.34454,
+        "location_name": "yet another random location name"
+    },
+    {
+        "id": "4",
+        "latitude": 5.34543,
+        "longitude": 6.34454,
+        "location_name": "this is a random location name"
+    },
+    {
+        "id": "5",
+        "latitude": 7.34543,
+        "longitude": 8.34454,
+        "location_name": "more random location name"
+    }
+]
