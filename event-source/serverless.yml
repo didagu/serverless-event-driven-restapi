@@ -6,7 +6,7 @@ provider:
 
 functions:
   upload:
-    handler: handler.fileUpload
+    handler: fileupload.handler
     events:
       - http: POST /upload
           
@@ -16,4 +16,4 @@ plugins:
 
 custom:
   serverless-offline:
-    port: 4000
+    port: 3001
