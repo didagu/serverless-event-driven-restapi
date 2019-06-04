@@ -14,17 +14,17 @@ class LocationSeeder {
     const tableParams = {
       TableName: this._tablename,
       KeySchema: [
-        // The type of of schema.  Must start with a HASH type, with an optional second RANGE.
+        // The type of schema.  Must start with a HASH type, with an optional second RANGE.
         {
           // Required HASH type attribute
-          AttributeName: 'id',
+          AttributeName: 'location_name',
           KeyType: 'HASH'
         }
       ],
       AttributeDefinitions: [
         // The names and types of all primary and index key attributes only
         {
-          AttributeName: 'id',
+          AttributeName: 'location_name',
           AttributeType: 'S' // (S | N | B) for string, number, binary
         }
       ],
