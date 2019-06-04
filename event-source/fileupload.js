@@ -42,17 +42,11 @@ exports.handler = async (event) => {
       contentType: 'application/json',
       data: data
     })
-  console.log(emitEvent)
-
-  // emitEvent
-  //   .then(res => console.log(res))
-  //   .catch(err => console.log('error from event emittion:', err))
 
   return {
     statusCode: emitEvent.status,
     body: JSON.stringify({
-      message: emitEvent.statusText,
-      data: emitEvent
+      message: emitEvent.statusText
     })
   }
 }
