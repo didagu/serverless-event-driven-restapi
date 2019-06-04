@@ -12,15 +12,21 @@ const docClient = DocClientWithEnvVar(process.env)
 const repository = new LocationRepository(docClient)
 const created = withStatusCode(204)
 const parseJson = parseWith(JSON.parse)
+const badRequest  = withStatusCode(400)
 
-exports.handler =  async (event) => {
+exports.handler = async (event) => {
+  if(event.body === null){
+    return badRequest()
+  }
 
-  console.log(event)
-  const { body } = event
-  const location = parseJson(body)
+  const body = parseJson(event.body)
+  
+  let location = body.data
+
   location = Object.assign({}, location, {
     "id" : uuidv1()
   })
-  await repository.put(location)
+  
+  await repository.put(location) 
   return created()
 }
