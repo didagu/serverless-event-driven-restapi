@@ -21,8 +21,8 @@ class LocationRepository {
     return response
   }
 
-  async get (id) {
-    let params = this._createParamsObject({ Key: { id } })
+  async get (location_name) {
+    let params = this._createParamsObject({ Key: { location_name } })
     const response = await this._documentClient.get(params).promise()
     return response
   }
@@ -31,12 +31,6 @@ class LocationRepository {
     let params = this._createParamsObject({ Item: location })
     await this._documentClient.put(params).promise()
     return location
-  }
-
-  async delete (id) {
-    let params = this._createParamsObject({ Key: { id } })
-    await this._documentClient.delete(params).promise()
-    return id
   }
 }
 
