@@ -6,4 +6,4 @@ jspm_packages
 .serverless
 
 #environment variables
-.env
+#.env
