@@ -8,9 +8,9 @@ list:
 get:
   handler: src/handlers/locations/get.handler
   events:
-    - http: get /locations/{id}
+    - http: get /locations/{location_name}
 
 add:
   handler: src/handlers/locations/add.handler
   events:
-    - 'file.uploaded'
+    - http: post /locations/add
